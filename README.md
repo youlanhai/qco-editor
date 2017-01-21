@@ -7,6 +7,10 @@
 项目主页 | https://github.com/youlanhai/qco-editor
 开始时间 | 2015年10月
 
+[下载编辑器beta版v0.1](https://pan.baidu.com/s/1eSBSFDK)
+
+![截图](doc/screenshot.png)
+
 ## 由来
 2015年的时候，也没有好用的cocos2d-x编辑器，就琢磨着自己开发一款开源的编辑器，于是就搭了个框架[cc-qt-framework](https://github.com/youlanhai/cc-qt-framework)。后来公司开2d项目，就继续完善了一下，用到了项目中。再后来项目解散，编辑器就没有用武之地了，留着也是浪费。虽然架构不是很好，但总能帮助到一些想做编辑器的朋友。
 
