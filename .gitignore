@@ -1,0 +1,60 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+/bin/
+/cocos2d-x/
+/cocos2d-x-build/
+/cocos2d-x-debug/
+/cocos2d-x-release/
+qtbuild/
+*.pro.user
+
+#xcode
+xcuserdata/
+project.xcworkspace/
+.DS_Store
+
+*.pyc
+
+*.log
+
+/build*/
+/xcode/
+
+/.vs/
+*.sln
+*.opendb
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.VC.db
+
+[dD]ebug/
+[rR]elease/
+GeneratedFiles/

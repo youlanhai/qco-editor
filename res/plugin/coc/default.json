@@ -1,0 +1,10 @@
+{
+	"CocAnimationPlayer" : {
+		"animation" : "",
+		"play" : "",
+		"pause" : true,
+		"loop" : true,
+		"remainLastFrame" : false,
+		"playSpeed": 1.0
+	}
+}

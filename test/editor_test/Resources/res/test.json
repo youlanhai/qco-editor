@@ -1,0 +1,44 @@
+{
+    "type": "Node",
+    "cameraMask": 30,
+    "name": "root",
+    "sceneType": 1,
+    "version": 1,
+    "children": [
+        {
+            "type": "Sprite3D",
+            "model": "res/tortoise.c3b",
+            "cameraMask": 30,
+            "name": "tortoise"
+        },
+        {
+            "type": "DirectionLight",
+            "cameraMask": 30,
+            "name": "directionLight"
+        },
+        {
+            "type": "Camera",
+            "cameraType": 1,
+            "cameraMask": 30,
+            "name": "camera",
+            "cameraFlag": 1,
+            "position": [
+                0,
+                722.653,
+                837.263
+            ],
+            "rotation": [
+                -41.6278,
+                0,
+                0
+            ],
+            "farPlane": 10000
+        },
+        {
+            "type": "AmbientLight",
+            "cameraMask": 30,
+            "name": "ambientLight",
+            "intensity": 0.4
+        }
+    ]
+}

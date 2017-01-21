@@ -1,0 +1,11 @@
+{
+	"menu" : [
+		["Lua脚本", "LuaScript"]
+	],
+	"parameter" : {
+		"LuaScript" : {
+			"type" : "LuaScript",
+			"scriptFile" : "qco/test_lua_script.lua"
+		}
+	}
+}

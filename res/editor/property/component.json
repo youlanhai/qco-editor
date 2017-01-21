@@ -1,0 +1,50 @@
+[
+	{
+		"name" : "Component",
+		"type" : "component",
+		"property" : {
+			"enable" : ["bool", "启用"]
+		}
+	},
+	{
+		"name" : "PhysicsBody",
+		"parent" : "Component",
+		"inheritMode" : "copy",
+		"type" : "component",
+		"property" : {
+			"tag" : ["int", "tag"],
+			"mass" : ["float", "质量"]
+		}
+	},
+	{
+		"name" : "LayoutComponent",
+		"parent" : "Component",
+		"inheritMode" : "copy",
+		"type" : "component",
+		"property" : {
+			"stretchSizeEnable" : {
+				"type" : "list",
+				"title" : "启用拉伸尺寸",
+				"items" : [
+					["bool", "宽"],
+					["bool", "高"]
+				]
+			},
+			"horizontalEdge" : ["HorizontalEdge", "水平停靠"],
+			"verticalEdge" : ["VerticalEdge", "垂直停靠"],
+			"margin" : ["margin", "边距"]
+		},
+		"saveOrder" : [
+			["active", "percentOnly", "percentPositionEnable", "percentSizeEnable", "stretchSizeEnable",
+			"horizontalEdge", "verticalEdge",
+			"percentPosition", "percentSize", "margin"
+			]
+		],
+		"propertyBridge" : [
+			["refresh", "horizontalEdge", "percentPositionEnable"],
+			["refresh", "verticalEdge", "percentPositionEnable"],
+			["refresh", "stretchSizeEnable", "percentSizeEnable"],
+			["refresh", "percentSizeEnable", "stretchSizeEnable"]
+		]
+	}
+]

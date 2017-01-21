@@ -1,0 +1,14 @@
+/win32/
+/*.app
+/test*/
+/mac/
+/editor_package/
+
+/*.h
+/*.cpp
+/Debug/
+/Release/
+/.qmake.stash
+/Info.plist
+/qtcceditor.build/
+/qtcceditor.xcodeproj/

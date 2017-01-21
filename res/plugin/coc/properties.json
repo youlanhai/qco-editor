@@ -1,0 +1,20 @@
+[
+	{
+		"name" : "CocAnimationPlayer",
+		"parent" : "Node",
+		"property" : {
+			"animation" : ["CocAnimationFile", "动画文件"],
+			"play" : ["enumPair", "播放动画"],
+			"loop" : ["bool", "循环"],
+			"remainLastFrame" : ["bool", "保留最后帧"],
+			"playSpeed" : ["float", "播放速度"]
+		},
+		"saveOrder" : [
+			["animation", "play", "loop", "remainLastFrame"]
+		],
+		"propertyBridge" : [
+			["refresh", "animation", "play"],
+			["refresh", "play", "size", "anchor"]
+		]
+	}
+]

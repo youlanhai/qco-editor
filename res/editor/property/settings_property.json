@@ -1,0 +1,20 @@
+[
+	{
+		"name" : "EditorBasicSettings",
+		"title" : "基础设置",
+		"property" : {
+			"showFPS" : ["bool", "显示FPS"],
+			"exportPath" : ["Directory", "导出路径"]
+		}
+	},
+	{
+		"name" : "EditorCanvasSettings",
+		"title" : "画布设置",
+		"property" : {
+			"canvasScale" : ["float", "画布缩放"],
+			"canvasSize" : ["size", "画布尺寸"],
+			"canvasColor" : ["color", "画布颜色"],
+			"bgColor" : ["color", "背景颜色"]
+		}
+	}
+]

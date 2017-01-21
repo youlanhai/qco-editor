@@ -1,0 +1,15 @@
+{
+	"menu" : [
+		["2d",
+			[
+				["coc动画", "CocAnimationPlayer"]
+			]
+		]
+	],
+	"parameter" : {
+		"CocAnimationPlayer" : {
+			"type" : "CocAnimationPlayer",
+			"animation" : ""
+		}
+	}
+}

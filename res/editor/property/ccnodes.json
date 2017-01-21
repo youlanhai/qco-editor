@@ -1,0 +1,188 @@
+[
+	{
+		"name" : "Node",
+		"parent" : null,
+		"property" : {
+			"type" : {
+				"type" : "string",
+				"title" : "类型",
+				"attribute" : {
+					"readOnly" : true
+				}
+			},
+			"name" : ["string", "名称"],
+			"tag" : ["int", "标签"],
+			"position" : ["vec3", "位置"],
+			"size" : ["size", "尺寸"],
+			"rotation" : ["vec3", "旋转"],
+			"scale" : ["vec3", "缩放"],
+			"anchor" : ["vec2", "锚点"],
+			"visible" : ["bool", "可见"],
+			"order" : ["int", "次序"],
+			"color" : ["color", "颜色"],
+			"cameraMask" : ["CameraMask", "相机参数"]
+		},
+		"saveOrder" : [
+			["position", "size", "rotation", "scale"]
+		],
+		"propertyBridge" : [
+			["refresh", "size", "position"],
+			["refresh", "anchor", "position"]
+		]
+	},
+	{
+		"name" : "Scene",
+		"parent" : "Node",
+		"property" : {
+			"name" : ["string", "名称"]
+		}
+	},
+	{
+		"name" : "Sprite",
+		"parent" : "Node",
+		"property" : {
+			"flip" : ["flip", "翻转"],
+			"image" : ["Image", "图片"],
+			"imageRect" : ["rect", "图片区域"]
+		},
+		"saveOrder" : [
+			["image", "imageRect"]
+		],
+		"propertyBridge" : [
+			["refresh", "image", "size"],
+			["refresh", "imageRect", "size"]
+		]
+	},
+	{
+		"name" : "Sprite3D",
+		"parent" : "Node",
+		"property" : {
+			"model" : ["Model", "模型"]
+		}
+	},
+	{
+		"name" : "BaseLight",
+		"parent" : "Node",
+		"property" : {
+			"intensity" : ["float", "亮度"],
+			"lightFlag" : ["LightFlag", "灯光标记"],
+			"enabled" : ["bool", "开关"]
+		}
+	},
+	{
+		"name" : "DirectionLight",
+		"parent" : "BaseLight",
+		"property" : {
+			"direction" : ["vec3", "方向"]
+		}
+	},
+	{
+		"name" : "PointLight",
+		"parent" : "BaseLight",
+		"property" : {
+			"range" : ["float", "范围"]
+		}
+	},
+	{
+		"name" : "SpotLight",
+		"parent" : "BaseLight",
+		"property" : {
+			"range" : ["float", "范围"],
+			"innerAngle" : ["float", "innerAngle"],
+			"outerAngle" : ["float", "outerAngle"]
+		}
+	},
+	{
+		"name" : "AmbientLight",
+		"parent" : "BaseLight",
+		"property" : {
+
+		}
+	},
+	{
+		"name" : "Camera",
+		"parent" : "Node",
+		"property" : {
+			"cameraType" : ["CameraType", "相机类型"],
+			"cameraFlag" : ["CameraFlag", "相机标记"],
+			"aspectRatio" : ["float", "屏幕宽高比"],
+			"fieldOfView" : ["float", "FOV"],
+			"zoomX" : ["float", "zoomX"],
+			"zoomY" : ["float", "zoomY"],
+			"nearPlane" : ["float", "近平面"],
+			"farPlane" : ["float", "远平面"],
+			"depth" : ["int", "深度"]
+		}
+	},
+	{
+		"name" : "CSBAnimation",
+		"parent" : "Node",
+		"property" : {
+			"file" : ["CSBFile", "动画文件"]
+		}
+	},
+	{
+		"name" : "EditorMultiSelector",
+		"property" : {
+			"position" : ["vec3", "位置"],
+			"size" : ["size", "尺寸"],
+			"rotation" : ["vec3", "旋转"],
+			"scale" : ["vec3", "缩放"],
+			"color" : ["color", "颜色"]
+		}
+	},
+	{
+		"name" : "TileCollisionNode",
+		"parent" : "Node",
+		"property" : {
+			"mapType" : {
+				"type" : "enum",
+				"title" : "地图类型",
+				"attribute" : {
+					"enumNames" : ["矩形", "交错"]
+				}
+			},
+			"mapSize" : ["size", "地图尺寸"],
+			"gridSize" : ["size", "格子尺寸"],
+			"rows" : ["ConstInt", "行数"],
+			"cols" : ["ConstInt", "列数"],
+			"selectedFrame" : ["enum", "刷子类型"],
+			"images" : {
+				"type" : "dynamicList",
+				"title" : "贴图",
+				"attribute" : {
+					"valueType" : "Image",
+					"valueDefault" : ""
+				}
+			},
+			"brushSize" : {
+				"type" : "list",
+				"title" : "画刷大小",
+				"items" : [
+					["int", "行数"],
+					["int", "列数"]
+				]
+			}
+		},
+		"propertyBridge" : [
+			["refresh", "mapType", "rows", "cols"],
+			["refresh", "mapSize", "rows", "cols"],
+			["refresh", "gridSize", "rows", "cols"]
+		]
+	},
+	{
+		"name" : "LayoutProxy",
+		"parent" : "Node",
+		"property" : {
+			"layout" : ["LayoutFile", "布局文件"]
+		}
+	},
+	{
+		"name" : "ParticleSystem",
+		"parent" : "Node",
+		"property" : {
+			"plist" : ["PList", "粒子文件"],
+			"positionType" : ["ParticlePositionType", "坐标类型"]
+		}
+	}
+]

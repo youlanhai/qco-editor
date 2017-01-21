@@ -1,0 +1,233 @@
+[
+	{
+		"name" : "Widget",
+		"parent" : "Node",
+		"property" : {
+			"enabled" : ["bool", "启用"],
+			"touchEnabled" : ["bool", "可触摸"],
+			"ignoreContentAdaptWithSize" : ["bool", "忽略自定义尺寸", "设置为true，表示控件大小始终随内部图元大小而改变；false，表示使用自定义大小"],
+			"layoutComponentEnable" : ["bool", "启用布局组件"]
+		},
+		"propertyBridge" : [
+			["refresh", "position", "margin"]
+		]
+	},
+	{
+		"name" : "Layout",
+		"parent" : "Widget",
+		"property" : {
+			"backgroundImage" : ["Image", "背景图片"],
+			"scale9enable" : ["bool", "9宫格"],
+			"scale9rect" : ["Scale9Rect", "9宫格区域"],
+			"backgroundColorType" : ["BackGroundColorType", "颜色类型"],
+			"backgroundColor" : ["color", "背景颜色"],
+			"clippingEnable" : ["bool", "裁剪"],
+			"clippingType" : ["ClippingType", "裁剪类型"],
+			"layoutType" : ["LayoutType", "布局类型"]
+		},
+		"saveOrder" : [
+			["layoutType", "backgroundImage", "scale9enable", "scale9rect"],
+			["layoutType", "backgroundColorType", "backgroundColor"]
+		]
+	},
+	{
+		"name" : "Button",
+		"parent" : "Widget",
+		"property" : {
+			"text" : ["string", "文本"],
+			"fontName" : ["font", "字体名称"],
+			"fontSize" : ["int", "字体大小"],
+			"fontColor" : ["color", "字体颜色"],
+			"image" : ["ButtonImage", "图片资源"],
+			"textImage" : ["CustomImage", "图片文字"],
+			"customImage" : ["CustomImage", "自定义图片"],
+			"scale9enable" : ["bool", "9宫格"],
+			"scale9rect" : ["Scale9Rect", "9宫格区域"],
+			"pressActionEnable" : ["bool", "按下动画"],
+			"pressZoomScale" : ["float", "按下缩放"],
+			"alignment" : ["TextHAlignment", "水平对齐"]
+		},
+		"saveOrder" : [
+			["image", "customImage", "scale9enable", "scale9rect"],
+			["fontName", "fontSize", "fontColor", "textImage", "text"]
+		],
+		"propertyBridge" : [
+			["refresh", "image", "size", "position"],
+			["refresh", "customImage", "size", "position"]
+		]
+	},
+	{
+		"name" : "Text",
+		"parent" : "Widget",
+		"property" : {
+			"text" : ["string", "文本"],
+			"fontName" : ["font", "字体名称"],
+			"fontSize" : ["int", "字体大小"],
+			"fontColor" : ["color", "字体颜色"],
+			"hAlignment" : ["TextHAlignment", "水平对齐方式"],
+			"vAlignment" : ["TextVAlignment", "垂直对齐方式"],
+			"textAreaSize": ["size", "文字区域", "要启用此功能，需要将\"忽略自定义尺寸\"设置为false。此功能与setContentSize相同。"],
+			"touchScaleEnable" : ["bool", "按下动画"],
+			"disableEffect" : ["LabelEffect", "禁用效果"],
+			"enableShadow" : ["color", "使用阴影"],
+			"enableOutline" : ["color", "使用轮廓"],
+			"enableGlow" : ["color", "使用辉光"]
+		},
+		"saveOrder" : [
+			["fontName", "fontSize", "fontColor", "text"],
+			["fontName", "hAlignment", "vAlignment", "textAreaSize", "text"],
+			["fontName", "enableShadow", "enableOutline", "enableGlow", "text"]
+		],
+		"propertyBridge" : [
+			["refresh", "text", "size"],
+			["refresh", "fontName", "size"]
+		]
+	},
+	{
+		"name" : "RichText",
+		"parent" : "Widget", 
+		"property" : {
+			"verticalSpace" : ["float", "水平间距"]
+		}
+	},
+	{
+		"name" : "TextBMFont",
+		"parent" : "Widget",
+		"property" : {
+			"fontName" : ["font", "字体文件"],
+			"text" : ["string", "文本内容"]
+		},
+		"saveOrder" : [
+			["fontName", "text"]
+		],
+		"propertyBridge" : [
+			["refresh", "text", "size"]
+		]
+	},
+	{
+		"name" : "TextAtlas",
+		"parent" : "Widget",
+		"property" : {
+			"text" : ["string", "文本内容"],
+			"fontName" : ["font", "映射文件"],
+			"itemCols" : ["int", "元素列数"],
+			"itemRows" : ["int", "元素行数"],
+			"startCharMap" : ["string", "开始字符"]
+		},
+		"saveOrder" : [
+			["fontName", "itemCols", "itemCols", "startCharMap", "text"]
+		],
+		"propertyBridge" : [
+			["refresh", "text", "size"]
+		]
+	},
+	{
+		"name" : "Image",
+		"parent" : "Widget",
+		"property" : {
+			"image" : ["Image", "图片"],
+			"imageRect" : ["rect", "图片区域"],
+			"scale9enable" : ["bool", "9宫格"],
+			"scale9rect" : ["Scale9Rect", "9宫格区域"]
+		},
+		"saveOrder" : [
+			["image", "imageRect", "scale9enable", "scale9rect"]
+		],
+		"propertyBridge" : [
+			["refresh", "image", "size"],
+			["refresh", "imageRect", "size"]
+		]
+	},
+	{
+		"name" : "TextField",
+		"parent" : "Widget",
+		"property" : {
+			"text" : ["string", "文本内容"],
+			"fontName" : ["font", "字体名称"],
+			"fontSize" : ["int", "文本大小"],
+			"textColor" : ["color", "文本颜色"],
+			"placeHolder" : ["string", "占位文本"],
+			"placeHolderColor" : ["color", "占位颜色"],
+			"maxLengthEnabled" : ["bool", "开启长度限制"],
+			"maxLength" : ["int", "最大长度"],
+			"passwordEnabled" : ["bool", "开启密码输入"]
+		},
+		"saveOrder" : [
+			["fontName", "fontSize", "textColor", "text"],
+			["fontName", "placeHolderColor", "placeHolder"]
+		]
+	},
+	{
+		"name" : "ScrollView",
+		"parent" : "Layout",
+		"property" : {
+			"direction" : ["Direction" , "方向"],
+			"innerContainerSize" : ["vec2", "容器尺寸"],
+			"innerContainerPosition" : ["vec2", "容器位置"],
+			"bounceEnabled" : ["bool", "允许反弹"],
+			"inertiaScrollEnabled" : ["bool", "允许惯性滚动"],
+			"scrollBarEnabled" : ["bool", "允许滚动条"],
+			"scrollBarPositionFromCorner" : ["vec2", "滚动条位置"],
+			"scrollBarPositionFromCornerForVertical" : ["vec2", "水平滚动条位置"],
+			"scrollBarPositionFromCornerForHorizontal" : ["vec2", "垂直滚动条位置"],
+			"scrollBarWidth" : ["float", "滚动条宽度"],
+			"scrollBarColor" : ["color", "滚动条颜色"],
+			"scrollBarAutoHideEnabled" : ["bool", "滚动条自动隐藏"],
+			"scrollBarAutoHideTime" : ["float", "滚动条隐藏时间"]
+		}
+	},
+	{
+		"name" : "PageView",
+		"parent" : "Layout",
+		"property" : {
+			"direction" : ["PageViewDirection" , "方向"],
+			"curPageIndex" : ["int", "当前页"],
+			"customScrollThreshold" : ["float", "滑动()像素翻页"],
+			"usingCustomScrollThreshold" : ["bool", "允许使用自定义翻页条件"]
+		}
+	},
+	{
+		"name" : "ListView",
+		"parent" : "ScrollView",
+		"property" : {
+			"gravity" : ["Gravity" , "重力类型"],
+			"itemsMargin" : ["float", "item间距"]
+		}
+	},
+	{
+		"name" : "Slider",
+		"parent" : "Widget",
+		"property" : {
+			"barTexture" : ["Image", "纹理"],
+			"maxPercent" : ["int", "最大进度"]
+		},
+		"propertyBridge" : [
+			["refresh", "barTexture", "size"]
+		]
+	},
+	{
+		"name" : "CheckBox",
+		"parent" : "Widget",
+		"property" : {
+			"selected" : ["bool", "选中"],
+			"backGround" : ["Image", "背景"],
+			"cross" : ["Image", "选中纹理"]
+		},
+		"propertyBridge" : [
+			["refresh", "backGround", "size"],
+			["refresh", "cross", "size"]
+		]
+	},
+	{
+		"name" : "LoadingBar",
+		"parent" : "Widget", 
+		"property" : {
+			"texture" : ["Image", "纹理"],
+			"direction" : ["LoadingBarDirection", "方向"],
+			"percent" : ["float", "进度"]
+		},
+		"propertyBridge" : [
+			["refresh", "texture", "size"]
+		]
+	}
+]

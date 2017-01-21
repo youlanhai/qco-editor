@@ -1,0 +1,176 @@
+{
+	"menu" : [
+		["空结点", "Node"],
+		["2d",
+			[
+				["精灵", "Sprite"],
+				["Tile网格", "TileCollisionNode"],
+				["粒子系统", "ParticleSystem"]
+			]
+		],
+		["3d",
+			[
+				["3D精灵", "Sprite3D"]
+			]
+		],
+		["相机",
+			[
+				["2D相机", "Camera2D"],
+				["3D相机", "Camera3D"]
+			]
+		],
+		["灯光",
+			[
+				["环境光", "AmbientLight"],
+				["点光源", "PointLight"],
+				["平行光", "DirectionLight"],
+				["聚光灯", "SpotLight"]
+			]
+		],
+		["UI",
+			[
+				["Widget", "Widget"],
+				["Layout", "Layout"],
+				["Button", "Button"],
+				["Text", "Text"],
+				["RichText", "RichText"],
+				["TextBMFont", "TextBMFont"],
+				["TextAtlas", "TextAtlas"],
+				["Image", "Image"],
+				["TextField", "TextField"],
+				["ScrollView", "ScrollView"],
+				["PageView", "PageView"],
+				["ListView", "ListView"],
+				["Slider", "Slider"],
+				["LoadingBar", "LoadingBar"],
+				["CheckBox", "CheckBox"]
+			]
+		]
+	],
+	"parameter" : {
+		"Node" : {
+			"type" : "Node"
+		},
+		"Sprite" : {
+			"type" : "Sprite",
+			"image" : "qco/HelloWorld.png"
+		},
+		"Sprite3D" : {
+			"type" : "Sprite3D",
+			"model" : "qco/tortoise.c3b"
+		},
+		"Camera2D" : {
+			"type" : "Camera",
+			"cameraType" : 1
+		},
+		"Camera3D" : {
+			"type" : "Camera",
+			"cameraType" : 0
+		},
+		"AmbientLight" : {
+			"type" : "AmbientLight"
+		},
+		"PointLight" : {
+			"type" : "PointLight"
+		},
+		"DirectionLight" : {
+			"type" : "DirectionLight"
+		},
+		"SpotLight" : {
+			"type" : "SpotLight"
+		},
+		"Widget" : {
+			"type" : "Widget",
+			"size" : [300, 200]
+		},
+		"Layout" : {
+			"type" : "Layout",
+			"size" : [300, 200],
+			"backgroundColorType" : 1,
+			"backgroundColor" : [180, 180, 200, 180]
+		},
+		"Button" : {
+			"type" : "Button",
+			"text" : "button",
+			"image" : ["qco/button_normal.png", "qco/button_pressed.png", "qco/button_disabled.png"],
+			"size" : [100, 30],
+			"fontColor" : [0, 0, 0, 255],
+			"fontSize" : 18,
+			"scale9enable" : true
+		},
+		"Text" : {
+			"type" : "Text",
+			"text" : "text",
+			"fontSize" : 18
+		},
+		"RichText" : {
+			"type" : "RichText"
+		},
+		"TextBMFont" : {
+			"type" : "TextBMFont",
+			"text" : ""
+		},
+		"TextAtlas" : {
+			"type" : "TextAtlas",
+			"text" : "",
+			"fontName" : "qco/atlas_num.png",
+			"itemCols" : 10,
+			"itemRows" : 1,
+			"startCharMap" : "0"
+		},
+		"Image" : {
+			"type" : "Image",
+			"image" : "qco/HelloWorld.png",
+			"ignoreContentAdaptWithSize" : true
+		},
+		"TextField" : {
+			"type" : "TextField",
+			"size" : [100, 30]
+		},
+		"ScrollView" : {
+			"type" : "ScrollView",
+			"size" : [300, 200],
+			"backgroundColorType" : 1,
+			"backgroundColor" : [180, 180, 200, 180]
+		},
+		"PageView" : {
+			"type" : "PageView",
+			"size" : [300, 200],
+			"backgroundColorType" : 1,
+			"backgroundColor" : [180, 180, 200, 180]
+		},
+		"ListView" : {
+			"type" : "ListView",
+			"size" : [300, 200],
+			"backgroundColorType" : 1,
+			"backgroundColor" : [180, 180, 200, 180]
+		},
+		"Slider" : {
+			"type" : "Slider",
+			"barTexture" : "qco/slider.png",
+			"maxPercent" : 100
+		},
+		"LoadingBar" : {
+			"type" : "LoadingBar",
+			"texture" : "qco/slider.png",
+			"percent" : 100,
+			"direction" : 0
+		},
+		"CheckBox" : {
+			"type" : "CheckBox",
+			"selected" : true,
+			"backGround" : "qco/checkbox.png",
+			"cross" : "qco/cross.png"
+		},
+		"TileCollisionNode" : {
+			"type" : "TileCollisionNode",
+			"mapSize" : [500, 500],
+			"gridSize" : [50, 50],
+			"mapType" : 0
+		},
+		"ParticleSystem" : {
+			"type" : "ParticleSystem",
+			"plist": "qco/spark.plist"
+		}
+	}
+}

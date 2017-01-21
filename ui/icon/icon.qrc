@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>hand.png</file>
+        <file>move.png</file>
+        <file>rotate.png</file>
+        <file>scale.png</file>
+        <file>layout.png</file>
+        <file>png.png</file>
+        <file>run.png</file>
+        <file>am.png</file>
+        <file>p.png</file>
+        <file>alignbottom.png</file>
+        <file>alignhcenter.png</file>
+        <file>alignleft.png</file>
+        <file>alignright.png</file>
+        <file>aligntop.png</file>
+        <file>alignvcenter.png</file>
+        <file>sameheight.png</file>
+        <file>samehgap.png</file>
+        <file>samesize.png</file>
+        <file>samevgap.png</file>
+        <file>samewidth.png</file>
+        <file>checkbox.png</file>
+        <file>down_arrow.png</file>
+        <file>handle.png</file>
+    </qresource>
+</RCC>

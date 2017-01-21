@@ -1,0 +1,19 @@
+{
+	"button" : {
+		"images" : [
+			"editor/ui/btn_normal.png",
+			"editor/ui/btn_press.png",
+			"editor/ui/btn_disable.png"
+		]
+	},
+	"checkbox" : {
+		"images" : [
+			"editor/ui/btn_normal.png",
+			"editor/ui/btn_press.png",
+			"editor/ui/btn_disable.png",
+			"editor/ui/btn_normal.png",
+			"editor/ui/btn_press.png",
+			"editor/ui/btn_disable.png"
+		]
+	}
+}

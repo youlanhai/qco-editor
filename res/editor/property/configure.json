@@ -1,0 +1,12 @@
+[
+	["property_default", "default_value.json"],
+	["property_value", "values.json"],
+	["property_type", "ccnodes.json"],
+	["property_type", "widgets.json"],
+	["property_type", "component.json"],
+	["property_type", "settings_property.json"],
+	["object_menu", "toolbox.json"],
+	["component_menu", "menu_component.json"],
+	["font", "font.json"],
+	["text", "text.json"]
+]

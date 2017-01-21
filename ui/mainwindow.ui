@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>894</width>
+    <height>737</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Editor</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="GLWidget" name="cocos_widget">
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>400</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::WheelFocus</enum>
+      </property>
+      <property name="acceptDrops">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>894</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuProject">
+     <property name="title">
+      <string>Project</string>
+     </property>
+     <addaction name="actionProjectNew"/>
+     <addaction name="actionProjectOpen"/>
+     <addaction name="actionProjectSave"/>
+    </widget>
+    <widget class="QMenu" name="menuConvert">
+     <property name="title">
+      <string>Convert</string>
+     </property>
+     <addaction name="actionConvertUUIDToPath"/>
+     <addaction name="actionConvertPathToUUID"/>
+     <addaction name="actionConvertAllFilesPathToUUID"/>
+     <addaction name="actionConvertAllFilesUUIDToPath"/>
+    </widget>
+    <addaction name="menuProject"/>
+    <addaction name="actionFileNew"/>
+    <addaction name="actionFileSave"/>
+    <addaction name="actionFileSaveAs"/>
+    <addaction name="actionFileExport"/>
+    <addaction name="menuConvert"/>
+    <addaction name="actionFileClear"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuOperation">
+     <property name="title">
+      <string>Operation</string>
+     </property>
+     <addaction name="actionOperateView"/>
+     <addaction name="actionOperateMove"/>
+     <addaction name="actionOperateRotate"/>
+     <addaction name="actionOperateScale"/>
+    </widget>
+    <widget class="QMenu" name="menuAlignment">
+     <property name="title">
+      <string>Alignment</string>
+     </property>
+     <addaction name="actionAlignLeft"/>
+     <addaction name="actionAlignHorizontalCenter"/>
+     <addaction name="actionAlignRight"/>
+     <addaction name="separator"/>
+     <addaction name="actionAlignTop"/>
+     <addaction name="actionAlignVerticalCenter"/>
+     <addaction name="actionAlignBottom"/>
+     <addaction name="separator"/>
+     <addaction name="actionSameWidth"/>
+     <addaction name="actionSameHeight"/>
+     <addaction name="actionSameSize"/>
+     <addaction name="separator"/>
+     <addaction name="actionSameHorizontalSpace"/>
+     <addaction name="actionSameVerticeSpace"/>
+    </widget>
+    <widget class="QMenu" name="menuCanvas">
+     <property name="title">
+      <string>Canvas</string>
+     </property>
+     <addaction name="actionCanvas3D"/>
+     <addaction name="actionCanvas2D"/>
+     <addaction name="actionCanvasTile"/>
+    </widget>
+    <addaction name="actionEditUndo"/>
+    <addaction name="actionEditRedo"/>
+    <addaction name="menuOperation"/>
+    <addaction name="menuAlignment"/>
+    <addaction name="menuCanvas"/>
+   </widget>
+   <widget class="QMenu" name="menuCreate">
+    <property name="title">
+     <string>GameObject</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionToolsStartSimulator"/>
+    <addaction name="actionToolsSetting"/>
+   </widget>
+   <widget class="QMenu" name="menuComponent">
+    <property name="title">
+     <string>Component</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuCreate"/>
+   <addaction name="menuComponent"/>
+   <addaction name="menuView"/>
+   <addaction name="menuTools"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Main Toolbar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>20</width>
+     <height>20</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOperateView"/>
+   <addaction name="actionOperateMove"/>
+   <addaction name="actionOperateRotate"/>
+   <addaction name="actionOperateScale"/>
+   <addaction name="separator"/>
+   <addaction name="actionToolsStartSimulator"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="inspectorWidget">
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>Inspector</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents"/>
+  </widget>
+  <widget class="QDockWidget" name="hierarchyWidget">
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>Scene Hierarchy</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QHierarchyTree" name="hierarchyTree">
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::DragDrop</enum>
+       </property>
+       <property name="defaultDropAction">
+        <enum>Qt::MoveAction</enum>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string notr="true">1</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="resourceFolderWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>200</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>Resource Hierarchy</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QResourceTree" name="resourceTree">
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::EditKeyPressed</set>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::DragDrop</enum>
+       </property>
+       <property name="defaultDropAction">
+        <enum>Qt::IgnoreAction</enum>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string notr="true">1</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QResourceTable" name="resourceContentTable">
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::EditKeyPressed</set>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::DragDrop</enum>
+       </property>
+       <property name="defaultDropAction">
+        <enum>Qt::IgnoreAction</enum>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>64</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="textElideMode">
+        <enum>Qt::ElideNone</enum>
+       </property>
+       <property name="verticalScrollMode">
+        <enum>QAbstractItemView::ScrollPerPixel</enum>
+       </property>
+       <property name="showGrid">
+        <bool>false</bool>
+       </property>
+       <property name="gridStyle">
+        <enum>Qt::NoPen</enum>
+       </property>
+       <property name="sortingEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="cornerButtonEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="rowCount">
+        <number>0</number>
+       </property>
+       <property name="columnCount">
+        <number>5</number>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+       <column/>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="alignToolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>Align Toolbar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>25</width>
+     <height>23</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAlignLeft"/>
+   <addaction name="actionAlignHorizontalCenter"/>
+   <addaction name="actionAlignRight"/>
+   <addaction name="separator"/>
+   <addaction name="actionAlignTop"/>
+   <addaction name="actionAlignVerticalCenter"/>
+   <addaction name="actionAlignBottom"/>
+   <addaction name="separator"/>
+   <addaction name="actionSameWidth"/>
+   <addaction name="actionSameHeight"/>
+   <addaction name="actionSameSize"/>
+   <addaction name="separator"/>
+   <addaction name="actionSameHorizontalSpace"/>
+   <addaction name="actionSameVerticeSpace"/>
+  </widget>
+  <widget class="QDockWidget" name="logContentWidget">
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>124</height>
+    </size>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="windowTitle">
+    <string>Log View</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QListWidget" name="logListWidget">
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="canvasToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionCanvas3D"/>
+   <addaction name="actionCanvas2D"/>
+   <addaction name="actionCanvasTile"/>
+  </widget>
+  <action name="actionFileOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionFileSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionFileClear">
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionEditUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionEditRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionOperateView">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/hand.png</normaloff>:/icon/hand.png</iconset>
+   </property>
+   <property name="text">
+    <string>View</string>
+   </property>
+  </action>
+  <action name="actionOperateMove">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/move.png</normaloff>:/icon/move.png</iconset>
+   </property>
+   <property name="text">
+    <string>Move</string>
+   </property>
+  </action>
+  <action name="actionOperateRotate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/rotate.png</normaloff>:/icon/rotate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate</string>
+   </property>
+  </action>
+  <action name="actionOperateScale">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/scale.png</normaloff>:/icon/scale.png</iconset>
+   </property>
+   <property name="text">
+    <string>Scale</string>
+   </property>
+  </action>
+  <action name="actionFileNew">
+   <property name="text">
+    <string>New Layout</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionFileSaveAs">
+   <property name="text">
+    <string>Save As</string>
+   </property>
+  </action>
+  <action name="actionProjectNew">
+   <property name="text">
+    <string>New Project</string>
+   </property>
+  </action>
+  <action name="actionProjectOpen">
+   <property name="text">
+    <string>Open Project</string>
+   </property>
+  </action>
+  <action name="actionProjectSave">
+   <property name="text">
+    <string>Save Project</string>
+   </property>
+  </action>
+  <action name="actionToolsStartSimulator">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/run.png</normaloff>:/icon/run.png</iconset>
+   </property>
+   <property name="text">
+    <string>Start Simulator</string>
+   </property>
+  </action>
+  <action name="actionToolsSetting">
+   <property name="text">
+    <string>setting</string>
+   </property>
+  </action>
+  <action name="actionFileExport">
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionConvertPathToUUID">
+   <property name="text">
+    <string>Convert path to UUID</string>
+   </property>
+  </action>
+  <action name="actionConvertUUIDToPath">
+   <property name="text">
+    <string>Convert UUID to path</string>
+   </property>
+  </action>
+  <action name="actionConvertAllFilesPathToUUID">
+   <property name="text">
+    <string>Convert all files path to UUID</string>
+   </property>
+  </action>
+  <action name="actionConvertAllFilesUUIDToPath">
+   <property name="text">
+    <string>Convert all files UUID to path</string>
+   </property>
+  </action>
+  <action name="actionAlignLeft">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/alignleft.png</normaloff>:/icon/alignleft.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align Left</string>
+   </property>
+  </action>
+  <action name="actionAlignTop">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/aligntop.png</normaloff>:/icon/aligntop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align Top</string>
+   </property>
+   <property name="toolTip">
+    <string>Align Top</string>
+   </property>
+  </action>
+  <action name="actionAlignRight">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/alignright.png</normaloff>:/icon/alignright.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align Right</string>
+   </property>
+   <property name="toolTip">
+    <string>Align Right</string>
+   </property>
+  </action>
+  <action name="actionAlignBottom">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/alignbottom.png</normaloff>:/icon/alignbottom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align Bottom</string>
+   </property>
+   <property name="toolTip">
+    <string>Align Bottom</string>
+   </property>
+  </action>
+  <action name="actionAlignHorizontalCenter">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/alignhcenter.png</normaloff>:/icon/alignhcenter.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align Horizontal Center</string>
+   </property>
+  </action>
+  <action name="actionAlignVerticalCenter">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/alignvcenter.png</normaloff>:/icon/alignvcenter.png</iconset>
+   </property>
+   <property name="text">
+    <string>Align Vertical Center</string>
+   </property>
+  </action>
+  <action name="actionSameWidth">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/samewidth.png</normaloff>:/icon/samewidth.png</iconset>
+   </property>
+   <property name="text">
+    <string>Same Width</string>
+   </property>
+  </action>
+  <action name="actionSameHeight">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/sameheight.png</normaloff>:/icon/sameheight.png</iconset>
+   </property>
+   <property name="text">
+    <string>Same Height</string>
+   </property>
+  </action>
+  <action name="actionSameHorizontalSpace">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/samehgap.png</normaloff>:/icon/samehgap.png</iconset>
+   </property>
+   <property name="text">
+    <string>Same Horizontal Gap</string>
+   </property>
+  </action>
+  <action name="actionSameVerticeSpace">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/samevgap.png</normaloff>:/icon/samevgap.png</iconset>
+   </property>
+   <property name="text">
+    <string>Same Vertice Gap</string>
+   </property>
+  </action>
+  <action name="actionSameSize">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/icon/samesize.png</normaloff>:/icon/samesize.png</iconset>
+   </property>
+   <property name="text">
+    <string>Same Size</string>
+   </property>
+  </action>
+  <action name="actionCanvas3D">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>3D</string>
+   </property>
+  </action>
+  <action name="actionCanvas2D">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>2D</string>
+   </property>
+  </action>
+  <action name="actionCanvasTile">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Tile</string>
+   </property>
+  </action>
+  <zorder>logContentWidget</zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>editor/glwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QHierarchyTree</class>
+   <extends>QTreeWidget</extends>
+   <header>editor/qhierarchytree.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QResourceTree</class>
+   <extends>QTreeWidget</extends>
+   <header>editor/qresourcetree.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QResourceTable</class>
+   <extends>QTableWidget</extends>
+   <header>editor/qresourcetable.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="icon/icon.qrc"/>
+ </resources>
+ <connections/>
+</ui>

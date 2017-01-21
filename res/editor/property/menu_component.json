@@ -1,0 +1,19 @@
+{
+	"menu" : [
+		["空组件", "Component"],
+		["刚体", "PhysicsBody"],
+		["界面布局", "LayoutComponent"]
+	],
+	"parameter" : {
+		"Component" : {
+			"type" : "Component"
+		},
+		"PhysicsBody" : {
+			"type" : "PhysicsBody"
+		},
+		"LayoutComponent" : {
+			"name" : "__ui_layout",
+			"type" : "LayoutComponent"
+		}
+	}
+}

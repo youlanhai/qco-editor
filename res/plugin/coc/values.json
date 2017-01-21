@@ -1,0 +1,9 @@
+{
+	"CocAnimationFile" : {
+		"type" : "file",
+		"attribute" : {
+			"fileDialogFilter" : "sc(*.sc)",
+			"fileRelativePath" : "$RESOURCE"
+		}
+	}
+}

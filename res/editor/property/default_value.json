@@ -1,0 +1,235 @@
+{
+	"Node" : {
+		"name" : "",
+		"tag" : 0,
+		"position" : [0, 0, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [1, 1, 1],
+		"size" : [0, 0],
+		"ignoreAnchor" : false,
+		"anchor" : [0, 0],
+		"skew" : [0, 0],
+		"visible" : true,
+		"order" : 0,
+		"color" : [255, 255, 255, 255],
+		"cameraMask" : 0
+	},
+	"Sprite" : {
+		"flip" : [false, false],
+		"imageRect" : [0, 0, 0, 0],
+		"image" : "",
+		"anchor" : [0.5, 0.5]
+	},
+	"Sprite3D" : {
+		"model" : ""
+	},
+	"BaseLight" : {
+		"intensity" : 1.0,
+		"lightFlag" : 1,
+		"enabled" : true
+	},
+	"DirectionLight" : {
+		"direction" : [-1.0, 0.0, 0.0]
+	},
+	"PointLight" : {
+		"range" : 10000.0
+	},
+	"SpotLight" : {
+		"direction" : [-1.0, 0.0, 0.0],
+		"innerAngle" : 0.0,
+		"outerAngle" : 0.5,
+		"range" : 10000.0
+	},
+	"AmbientLight" : {
+
+	},
+	"Camera" : {
+		"cameraType" : 0,
+		"cameraFlag" : 0,
+		"aspectRatio" : 1.0,
+		"fieldOfView" : 60.0,
+		"zoomX" : 100.0,
+		"zoomY" : 100.0,
+		"nearPlane" : 1.0,
+		"farPlane" : 1000.0,
+		"depth" : 0.0
+	},
+	"Widget" : {
+		"anchor" : [0.5, 0.5],
+		"enabled" : true,
+		"touchEnabled" : false,
+		"positionPercent" : [0.0, 0.0],
+		"positionType" : 0,
+		"sizePercent" : [0.0, 0.0],
+		"sizeType" : 0,
+		"ignoreContentAdaptWithSize" : true,
+		"layoutComponentEnable" : false
+	},
+	"Layout" : {
+		"anchor" : [0.0, 0.0],
+		"backgroundImage" : "",
+		"scale9enable" : "false",
+		"scale9rect" : [0, 0, 0, 0],
+		"backgroundColorType" : 0,
+		"backgroundColor" : [255, 255, 255, 255],
+		"clippingEnable" : false,
+		"clippingType" : 0,
+		"layoutType" : 0
+	},
+	"Button" : {
+		"imageStyle" : 0,
+		"imageNormal" : "",
+		"imagePressed" : "",
+		"imageDisabled" : "",
+		"imageFromOne" : "",
+		"fontImage" : "",
+		"scale9enable" : false,
+		"scale9rect" : [0, 0, 0, 0],
+		"pressActionEnable" : false,
+		"pressZoomScale" : 1.0,
+		"text" : "",
+		"fontName" : "",
+		"fontSize" : 12,
+		"fontColor" : [255, 255, 255, 255],
+		"alignment" : 0
+	},
+	"Text" : {
+		"text" : "",
+		"fontName" : "",
+		"fontSize" : 12,
+		"fontColor" : [255, 255, 255, 255],
+		"hAlignment" : 0,
+		"vAlignment" : 0,
+		"touchScaleEnable" : 0,
+		"disableEffect" : 0,
+		"enableShadow" : [255, 255, 255, 255],
+		"enableOutline" : [255, 255, 255, 255],
+		"enableGlow" : [255, 255, 255, 255]
+	},
+	"RichText" : {
+		"verticalSpace" : 0.0
+	},
+	"TextBMFont" : {
+		"fontName" : "", 
+		"text" : ""
+	},
+	"TextAtlas" : {
+		"text" : "",
+		"fontName" : "",
+		"itemCols" : 0,
+		"itemRows" : 0,
+		"startCharMap" : ""
+	},
+	"Image" : {
+		"image" : "",
+		"imageRect" : [0, 0, 0, 0],
+		"scale9enable" : false,
+		"scale9rect" : [0, 0, 0, 0]
+	},
+	"TextField" : {
+		"maxLengthEnabled" : false,
+		"maxLength" : 0,
+		"passwordEnabled" : false,
+		"placeHolder" : "",
+		"placeHolderColor" : [255, 255, 255, 255],
+		"textColor" : [255, 255, 255, 255],
+		"fontSize" : 10,
+		"fontName" : "",
+		"text" : ""
+	},
+	"ScrollView" : {
+		"direction" : 1,
+		"innerContainerSize" : [0.0, 0.0],
+		"innerContainerPosition" : [0.0, 0.0],
+		"bounceEnabled" : false,
+		"inertiaScrollEnabled" : true,
+		"scrollBarEnabled" : true,
+		"scrollBarPositionFromCorner" : [0.0, 0.0],
+		"scrollBarPositionFromCornerForVertical" : [0.0, 0.0],
+		"scrollBarPositionFromCornerForHorizontal" : [0.0, 0.0],
+		"scrollBarWidth" : 0.0,
+		"scrollBarColor" : [255, 255, 255, 255],
+		"scrollBarAutoHideEnabled" : true,
+		"scrollBarAutoHideTime" : 0.0
+	},
+	"PageView" : {
+		"direction" : 0,
+		"curPageIndex" : -1,
+		"customScrollThreshold" : 0.0,
+		"usingCustomScrollThresholds" : false
+	},
+	"ListView" : {
+		"gravity" : 2,
+		"itemsMargin" : 0.0
+	},
+	"Slider" : {
+		"barTexture" : "",
+		"maxPercent" : 100
+	},
+	"LoadingBar" : {
+		"texture" : "",
+		"percent" : 0,
+		"direction" : 0
+	},
+	"CheckBox" : {
+		"selected" : true,
+		"backGround" : "",
+		"cross" : ""
+	},
+	"CSBAnimation" : {
+		"file" : ""
+	},
+	"Component" : {
+		"name" : "",
+		"enable" : true
+	},
+	"PhysicsBody" : {
+		"tag" : 0,
+		"mass" : 0
+	},
+	"LuaScript" : {
+		"scriptFile" : ""
+	},
+	"EditorMultiSelector" : {
+		"position" : [0, 0, 0],
+		"size" : [0, 0],
+		"rotation" : [0, 0, 0],
+		"scale" : [0, 0, 0],
+		"color" : [255, 255, 255, 255]
+	},
+	"TileCollisionNode" : {
+		"mapType" : 0,
+		"mapSize" : [0, 0],
+		"gridSize" : [1, 1],
+		"rows" : 0,
+		"cols" : 0,
+		"selectedFrame" : 0
+	},
+	"LayoutComponent" : {
+		"active" : true,
+		"percentOnly" : false,
+		"percentPositionEnable" : [false, false],
+		"percentSizeEnable" : [false, false], 
+		"stretchSizeEnable" : [false, false],
+		"horizontalEdge" : 0, 
+		"verticalEdge" : 0,
+		"percentPosition" : [0, 0], 
+		"percentSize" : [0, 0], 
+		"margin" : [0, 0, 0, 0],
+		"brushSize" : [1, 1]
+	},
+	"ParticleSystem" : {
+		"plist" : "",
+		"positionType" : 0
+	},
+	"EditorBasicSettings" : {
+		"showFPS" : true,
+		"exportPath" : ""
+	},
+	"EditorCanvasSettings" : {
+		"canvasScale" : 1,
+		"canvasSize" : [960, 640],
+		"canvasColor" : [100, 100, 100, 255],
+		"bgColor" : [0, 0, 0, 255]
+	}
+}

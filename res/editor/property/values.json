@@ -1,0 +1,248 @@
+{
+	"testEume" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["常态", "按下", "抬起", "禁用"]
+		}
+	},
+	"vec2" : {
+		"type" : "floatList",
+		"attribute" : {
+			"size" : 2
+		}
+	},
+	"vec3" : {
+		"type" : "floatList",
+		"attribute" : {
+			"size" : 3
+		}
+	},
+	"size" : {
+		"type" : "floatList",
+		"attribute" : {
+			"size" : 2
+		}
+	},
+	"rect" : {
+		"type" : "list",
+		"items" : [
+			["float", "x"],
+			["float", "y"],
+			["float", "宽"],
+			["float", "高"]
+		]
+	},
+	"Scale9Rect" : {
+		"type" : "list",
+		"items" : [
+			["float", "左宽"],
+			["float", "顶宽"],
+			["float", "右宽"],
+			["float", "底宽"]
+		]
+	},
+	"margin" : {
+		"type" : "list",
+		"items" : [
+			["float", "左"],
+			["float", "右"],
+			["float", "上"],
+			["float", "下"]
+		]
+	},
+	"flip" : {
+		"type" : "list",
+		"items" : [
+			["bool", "水平翻转"],
+			["bool", "垂直翻转"]
+		]
+	},
+	"CameraMask" : {
+		"type" : "flag",
+		"attribute" : {
+			"flagNames" : ["Default", "User1", "User2", "User3", "User4", "User5"]
+		}
+	},
+	"LightFlag" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["LIGHT0", "LIGHT1", "LIGHT2", "LIGHT3", "LIGHT4", "LIGHT5", "LIGHT6", "LIGHT7"]
+		}
+	},
+	"CameraType" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["透视", "正交"]
+		}
+	},
+	"CameraFlag" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["Default", "User1", "User2", "User3", "User4", "User5"]
+		}
+	},
+	"BrightStyle" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["无", "常规", "高亮"]
+		}
+	},
+	"PositionType" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["绝对坐标", "相对坐标"]
+		}
+	},
+	"SizeType" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["绝对尺寸", "相对尺寸"]
+		}
+	},
+	"ClippingType" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["模板", "矩形"]
+		}
+	},
+	"BackGroundColorType" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["无", "填充", "渐变"]
+		}
+	},
+	"LayoutType" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["绝对坐标", "垂直对齐", "水平对齐", "相对坐标"]
+		}
+	},
+	"TextHAlignment" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["左对齐", "水平居中", "右对齐"]
+		}
+	},
+	"TextVAlignment" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["顶对齐", "垂直居中", "底对齐"]
+		}
+	},
+	"LabelEffect" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["常规", "轮廓", "阴影", "辉光", "所有"]
+		}
+	},
+	"HorizontalEdge" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["无", "左对齐", "右对齐", "水平居中"]
+		}
+	},
+	"VerticalEdge" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["无", "底对齐", "顶对齐", "垂直居中"]
+		}
+	},
+	"Image" : {
+		"type" : "file",
+		"attribute" : {
+			"fileDialogFilter" : "Images(*.png *.jpg)",
+			"fileRelativePath" : "$RESOURCE"
+		}
+	},
+	"Model" : {
+		"type" : "file",
+		"attribute" : {
+			"fileDialogFilter" : "Images(*.c3b)",
+			"fileRelativePath" : "$RESOURCE"
+		}
+	},
+	"CSBFile" : {
+		"type" : "file",
+		"attribute" : {
+			"fileDialogFilter" : "csb(*.csb)",
+			"fileRelativePath" : "$RESOURCE"
+		}
+	},
+	"PList" : {
+		"type" : "file",
+		"attribute" : {
+			"fileDialogFilter" : "csb(*.csb)",
+			"fileRelativePath" : "$RESOURCE"
+		}
+	},
+	"LayoutFile" : {
+		"type" : "file",
+		"attribute" : {
+			"fileDialogFilter" : "layout(*.layout)",
+			"fileRelativePath" : "$RESOURCE"
+		}
+	},
+	"Direction" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["无", "垂直", "水平", "双向"]
+		}
+	},
+	"PageViewDirection" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["水平", "垂直"]
+		}
+	},
+	"Gravity" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["左", "右", "水平居中", "顶", "底", "垂直居中"]
+		}
+	},
+	"ImageStyle" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["单张", "二分图", "三分图"]
+		}
+	},
+	"ButtonImage" : {
+		"type" : "list",
+		"items" : [
+			["Image", "常规"],
+			["Image", "按下"],
+			["Image", "禁用"]
+		]
+	},
+	"CustomImage" : {
+		"type" : "list",
+		"items" : [
+			["Image", "图片"],
+			["ImageStyle", "风格"]
+		]
+	},
+	"LoadingBarDirection" : {
+		"type" : "enum", 
+		"attribute" : {
+			"enumNames" : ["LEFT", "RIGHT"]
+		}
+	},
+	"ConstInt" : {
+		"type" : "int",
+		"attribute" : {
+			"readOnly" : true
+		}
+	},
+	"ParticlePositionType" : {
+		"type" : "enum",
+		"attribute" : {
+			"enumNames" : ["世界", "相对", "组合"]
+		}
+	},
+	"Directory" : {
+		"type" : "file",
+		"attribute" : {
+			"fileDialogType" : 2
+		}
+	}
+}
