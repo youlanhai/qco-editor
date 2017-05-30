@@ -7,7 +7,9 @@
 项目主页 | https://github.com/youlanhai/qco-editor
 开始时间 | 2015年10月
 
-[下载编辑器beta版v0.1](https://pan.baidu.com/s/1eSBSFDK)
+[下载编辑器beta版v0.1-windows可执行程序](https://pan.baidu.com/s/1eSBSFDK)
+
+<br>
 
 ![截图](doc/screenshot.png)
 
