@@ -33,7 +33,7 @@ namespace Editor
         TilePainter* createPainter(pip::TileCollisionNode *component, const JsonHandle &config);
 
         TilePainter*    painter_;
-        cocos2d::RefPtr<pip::TileCollisionNode> tileCollision_;
+        SmartPointer<pip::TileCollisionNode> tileCollision_;
     };
 }
 

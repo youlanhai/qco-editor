@@ -4,13 +4,10 @@
 #include "config.h"
 #include <QObject>
 #include <QModelIndex>
-#include <base/CCRefPtr.h>
+#include "runtime/smartpointer.h"
 #include <map>
 #include <smartjson/src/json.hpp>
-
-NS_CC_BEGIN
-class Node;
-NS_CC_END
+#include <2d/CCNode.h>
 
 class QHierarchyTree;
 class QTreeWidgetItem;
@@ -22,7 +19,7 @@ typedef mjson::Node JsonValue;
 
 namespace Editor
 {
-    typedef cocos2d::RefPtr<cocos2d::Node> NodePtr;
+    typedef SmartPointer<cocos2d::Node> NodePtr;
     class MenuLoader;
 
     class EDITOR_DLL Hierarchy : public QObject

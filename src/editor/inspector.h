@@ -7,7 +7,7 @@
 #include <QString>
 #include <unordered_map>
 
-#include <base/CCRefPtr.h>
+#include "runtime/smartpointer.h"
 #include <runtime/json_helper.h>
 
 //predefination
@@ -84,7 +84,7 @@ namespace Editor
 
         QtProperty* addComponent(const std::string &name, const JsonHandle &config);
 
-        cocos2d::RefPtr<cocos2d::Node> targetNode_;
+        SmartPointer<cocos2d::Node> targetNode_;
         JsonHandle                  targetConfig_;
         PropertyGroup*              targetPropertyGroup_;
 

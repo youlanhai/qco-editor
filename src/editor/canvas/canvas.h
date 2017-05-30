@@ -7,7 +7,7 @@
 
 #include <platform/CCPlatformMacros.h>
 #include <base/ccTypes.h>
-#include <base/CCRefPtr.h>
+#include "runtime/smartpointer.h"
 
 #include "../common_types.h"
 
@@ -70,8 +70,8 @@ namespace Editor
 
         virtual void drawSelectedRect();
         
-        cocos2d::RefPtr<cocos2d::Node>      rootNode_;
-        cocos2d::RefPtr<cocos2d::Node>      targetNode_;
+        SmartPointer<cocos2d::Node>      rootNode_;
+        SmartPointer<cocos2d::Node>      targetNode_;
 
         cocos2d::Point                      lastMousePosition_;
         GizmoMode                           gizmoMode_;

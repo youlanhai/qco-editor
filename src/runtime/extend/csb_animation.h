@@ -3,15 +3,15 @@
 
 #include "../pip_config.h"
 #include <2d/CCNode.h>
-#include <base/CCRefPtr.h>
+#include "../smartpointer.h"
 #include <cocostudio/ActionTimeline/CCActionTimeline.h>
 
 NS_PIP_BEGIN
 
 using cocostudio::timeline::ActionTimeline;
 
-typedef cocos2d::RefPtr<cocos2d::Node> NodePtr;
-typedef cocos2d::RefPtr<ActionTimeline> ActionTimeLinePtr;
+typedef SmartPointer<cocos2d::Node> NodePtr;
+typedef SmartPointer<ActionTimeline> ActionTimeLinePtr;
 
 class PIP_DLL CSBAnimation : public cocos2d::Node
 {

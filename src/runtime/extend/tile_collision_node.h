@@ -3,7 +3,7 @@
 
 #include "../pip_config.h"
 #include <2d/CCNode.h>
-#include <base/CCRefPtr.h>
+#include "../smartpointer.h"
 #include <renderer/CCCustomCommand.h>
 
 NS_CC_BEGIN
@@ -14,9 +14,8 @@ NS_CC_END
 
 
 NS_PIP_BEGIN
-using cocos2d::RefPtr;
 
-typedef RefPtr<cocos2d::SpriteFrame> SpriteFramePtr;
+typedef SmartPointer<cocos2d::SpriteFrame> SpriteFramePtr;
 typedef std::vector<SpriteFramePtr> SpriteFrames;
 
 class PIP_DLL TileCollisionNode : public cocos2d::Node
@@ -112,8 +111,8 @@ protected:
     bool            insideBounds_;
     
     SpriteFrames    frames_;
-    RefPtr<cocos2d::VertexBuffer>   vertexBuffer_;
-    RefPtr<cocos2d::IndexBuffer>    indexBuffer_;
+    SmartPointer<cocos2d::VertexBuffer>   vertexBuffer_;
+    SmartPointer<cocos2d::IndexBuffer>    indexBuffer_;
     
     Vertices        vertices_;
     Primitives      primitives_;

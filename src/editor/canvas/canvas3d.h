@@ -2,7 +2,7 @@
 #define CANVAS3D_H
 
 #include "canvas.h"
-#include <base/CCRefPtr.h>
+#include "runtime/smartpointer.h"
 
 NS_CC_BEGIN
 class Camera;
@@ -52,11 +52,11 @@ namespace Editor
         void onNodeRotationChange(const cocos2d::Vec3 &rotation);
         void onNodeScaleChange(const cocos2d::Vec3 &scale);
 
-        cocos2d::RefPtr<cocos2d::DrawNode3D>    drawNode_;
-        cocos2d::RefPtr<cocos2d::Camera>        camera_;
+        SmartPointer<cocos2d::DrawNode3D>    drawNode_;
+        SmartPointer<cocos2d::Camera>        camera_;
 
-        cocos2d::RefPtr<GizmoNode>              gizmo_;
-        cocos2d::RefPtr<cocos2d::Sprite3D>      ground_;
+        SmartPointer<GizmoNode>              gizmo_;
+        SmartPointer<cocos2d::Sprite3D>      ground_;
 
         cocos2d::Point      lastMousePosition_;
 

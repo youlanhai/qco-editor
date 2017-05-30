@@ -4,12 +4,12 @@
 #include "coc_config.h"
 #include "runtime/singleton.h"
 
-#include <base/CCRefPtr.h>
+#include "runtime/smartpointer.h"
 #include <unordered_map>
 
 NS_COC_BEGIN
 class Animation;
-typedef cocos2d::RefPtr<Animation> AnimationPtr;
+typedef cocos2d::SmartPointer<Animation> AnimationPtr;
 
 class AnimationMgr : public Singleton<AnimationMgr>
 {

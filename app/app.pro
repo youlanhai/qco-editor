@@ -29,11 +29,12 @@ macx{
     ICON = $$PROJECT_PATH/ui/appicon.icns
 
     # 只有发布的时候才需要
+
     CONFIG(release, debug|release) {
         QMAKE_POST_LINK += "python $$PROJECT_PATH/tools/resolvelib.py -m app -build-mode $$BUILD_MODE -app-name $$TARGET"
     }
 
-}else:win32{
+} else:win32 {
     copyToDestdir($$PROJECT_PATH/res, $$DESTDIR/res)
 
     RC_FILE += win32/qtcc_editor.rc
@@ -42,7 +43,7 @@ macx{
         win32/editor.ico \
         win32/qtcc_editor.rc
 
-}else{
+} else {
     copyToDestdir($$PROJECT_PATH/res, $$DESTDIR/res)
 }
 

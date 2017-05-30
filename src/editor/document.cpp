@@ -431,9 +431,19 @@ namespace Editor
         rootNode_ = node;
     }
 
+    NodePtr Document::getRootNode()
+    {
+        return rootNode_;
+    }
+
     void Document::setTargetNode(NodePtr node)
     {
         targetNode_ = node;
+    }
+
+    NodePtr Document::getTargetNode()
+    {
+        return targetNode_;
     }
 
     void Document::slotRenameFile(const QString &oldName, const QString &newName)
@@ -458,6 +468,11 @@ namespace Editor
         std::ostringstream ss;
         ss << prefix << "-" << genNameSerialNumber();
         return ss.str();
+    }
+
+    SmartPointer<EditorMultiSelector> Document::getMultiSelector()
+    {
+        return multiSelector_;
     }
 
 } // end namespace Editor

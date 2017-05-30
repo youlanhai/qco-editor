@@ -11,7 +11,7 @@
 #include "coc_stream.h"
 
 #include <base/CCRef.h>
-#include <base/CCRefPtr.h>
+#include "runtime/smartpointer.h"
 #include <math/Mat4.h>
 
 #include <unordered_map>
@@ -23,7 +23,7 @@ NS_CC_END
 
 NS_COC_BEGIN
 
-typedef cocos2d::RefPtr<cocos2d::Texture2D> TexturePtr;
+typedef cocos2d::SmartPointer<cocos2d::Texture2D> TexturePtr;
 class MovieClip;
 class Shape;
 

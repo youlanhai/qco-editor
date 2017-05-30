@@ -53,14 +53,14 @@ namespace Editor
         SceneType getSceneType() const { return type_; }
 
         void setRootNode(NodePtr node);
-        NodePtr getRootNode(){ return rootNode_; }
+        NodePtr getRootNode();
 
         void setTargetNode(NodePtr node);
-        NodePtr getTargetNode(){ return targetNode_; }
+        NodePtr getTargetNode();
 
         QUndoStack& getUndoStack(){ return undoStack_; }
 
-        cocos2d::RefPtr<EditorMultiSelector> getMultiSelector(){ return multiSelector_; }
+        SmartPointer<EditorMultiSelector> getMultiSelector();
 
         int genNameSerialNumber();
         std::string genNodeName(const std::string &prefix);
@@ -82,7 +82,7 @@ namespace Editor
         NodePtr             targetNode_;
         QString             fileName_;
 
-        cocos2d::RefPtr<EditorMultiSelector> multiSelector_;
+        SmartPointer<EditorMultiSelector> multiSelector_;
 
         typedef std::map<cocos2d::Node*, JsonValue> ConfigureMap;
         ConfigureMap        configures_;

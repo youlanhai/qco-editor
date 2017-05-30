@@ -60,7 +60,7 @@ namespace Editor
         void updateCursor();
         void dragScene(const cocos2d::Point &pt, const cocos2d::Point &last);
 
-        cocos2d::RefPtr<cocos2d::DrawNode>  drawRect_;
+        SmartPointer<cocos2d::DrawNode>  drawRect_;
 
         int                 dragMode_;
         OperateMode         operateMode_;
@@ -71,9 +71,9 @@ namespace Editor
         virtual void setCanvasSize(cocos2d::Size size) override;
 
         GLWidget*           view_;
-        cocos2d::RefPtr<cocos2d::LayerColor> bgLayer_;
-        cocos2d::RefPtr<cocos2d::Sprite>    grid_;
-        cocos2d::RefPtr<cocos2d::Node>      axisNode_;
+        SmartPointer<cocos2d::LayerColor> bgLayer_;
+        SmartPointer<cocos2d::Sprite>    grid_;
+        SmartPointer<cocos2d::Node>      axisNode_;
     };
 
 } //end namespace Editor

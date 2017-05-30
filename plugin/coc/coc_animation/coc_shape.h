@@ -12,7 +12,7 @@
 
 #include <math/Vec2.h>
 #include <base/ccTypes.h>
-#include <base/CCRefPtr.h>
+#include "runtime/smartpointer.h"
 
 #include <vector>
 
@@ -23,7 +23,7 @@ NS_CC_END
 NS_COC_BEGIN
 
 class AnimationLoader;
-typedef cocos2d::RefPtr<cocos2d::Texture2D> TexturePtr;
+typedef cocos2d::SmartPointer<cocos2d::Texture2D> TexturePtr;
 
 class ShapePiece
 {

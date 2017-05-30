@@ -22,7 +22,7 @@ namespace Editor
 
         NodePtr     node_;
         NodePtr     parent_;
-        ssize_t     index_;
+        int 		index_;
         std::map<cocos2d::Node*, mjson::Node> configs_;
     };
 }

@@ -9,6 +9,8 @@
 #include "cc_predefine.h"
 #include "runtime/singleton.h"
 
+#include <2d/CCScene.h>
+
 // predefination
 class PropertyParam;
 class QUndoCommand;
