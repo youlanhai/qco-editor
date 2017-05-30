@@ -1,5 +1,7 @@
 ﻿#include "lua_module_register.h"
 
+#include <cocos2d.h>
+
 #include "cocosdenshion/lua_cocos2dx_cocosdenshion_manual.h"
 #include "network/lua_cocos2dx_network_manual.h"
 #include "cocosbuilder/lua_cocos2dx_cocosbuilder_manual.h"
@@ -20,7 +22,11 @@ int lua_module_register(lua_State* L)
     register_network_module(L);
     register_cocosbuilder_module(L);
     register_cocostudio_module(L);
+#if COCOS2D_VERSION < 0x00031500
     register_ui_moudle(L);
+#else
+    register_ui_module(L);
+#endif
     register_extension_module(L);
     register_spine_module(L);
     register_cocos3d_module(L);

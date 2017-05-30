@@ -9,7 +9,7 @@
 
 NS_COC_BEGIN
 class Animation;
-typedef cocos2d::SmartPointer<Animation> AnimationPtr;
+typedef SmartPointer<Animation> AnimationPtr;
 
 class AnimationMgr : public Singleton<AnimationMgr>
 {

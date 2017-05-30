@@ -93,7 +93,7 @@ protected:
     
     void genMovieBoundingBox(pip::RectF& bb, const cocos2d::Mat4& transform, const MovieClip* clip, size_t timeline) const;
 
-    cocos2d::SmartPointer<Animation>  animation_;
+    SmartPointer<Animation>  animation_;
     std::string     animationFile_;
     std::string     currentClipName_;
     const MovieClip* currentMovie_;

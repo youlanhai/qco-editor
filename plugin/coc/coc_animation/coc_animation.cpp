@@ -90,4 +90,9 @@ const Shape* Animation::getShape(size_t shapeID) const
     return nullptr;
 }
 
+TexturePtr Animation::getTexture(size_t index)
+{
+    return textures_[index];
+}
+
 NS_COC_END

@@ -23,7 +23,7 @@ NS_CC_END
 
 NS_COC_BEGIN
 
-typedef cocos2d::SmartPointer<cocos2d::Texture2D> TexturePtr;
+typedef SmartPointer<cocos2d::Texture2D> TexturePtr;
 class MovieClip;
 class Shape;
 
@@ -54,7 +54,7 @@ public:
     const MovieClips& getMovieClips() const { return movies_; }
     const NameMap& getNameMap() const { return names_; }
     
-    TexturePtr getTexture(size_t index){ return textures_[index]; }
+    TexturePtr getTexture(size_t index);
 
     const cocos2d::Mat4& getMatrix(size_t index) const { return matrixPallet_[index]; }
     size_t getMatrixNum() const { return matrixPallet_.size(); }

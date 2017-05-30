@@ -2,6 +2,7 @@
 #define SMARTPOINTER_H
 
 #include <cassert>
+#include <type_traits>
 
 /**
  * 智能指针。

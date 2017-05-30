@@ -23,7 +23,7 @@ NS_CC_END
 NS_COC_BEGIN
 
 class AnimationLoader;
-typedef cocos2d::SmartPointer<cocos2d::Texture2D> TexturePtr;
+typedef SmartPointer<cocos2d::Texture2D> TexturePtr;
 
 class ShapePiece
 {
