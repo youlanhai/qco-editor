@@ -3,6 +3,7 @@
 
 #include <cassert>
 #include <type_traits>
+#include <functional>
 
 /**
  * 智能指针。
