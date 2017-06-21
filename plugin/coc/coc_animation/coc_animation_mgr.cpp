@@ -1,5 +1,5 @@
-﻿#include "coc_animation_mgr.h"
-#include "coc_animation.h"
+﻿#include "coc_animation.h"
+#include "coc_animation_mgr.h"
 
 IMPLEMENT_SINGLETON(coc::AnimationMgr);
 

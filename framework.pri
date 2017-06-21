@@ -79,7 +79,7 @@ macx{
         $$CC_EXTERNAL_DIR/glfw3/include/mac \
         $$CC_ROOT_PATH/cocos/platform/mac
 
-    LIBS += -lcocos2d
+    LIBS += -lcocos2d -lcocos2dInternal
 
 }else:win32{
     INCLUDEPATH += \
