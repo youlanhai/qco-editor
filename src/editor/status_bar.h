@@ -6,7 +6,7 @@
 #include <math/Vec2.h>
 
 class QStatusBar;
-class QDoubleSpinBox;
+class QSpinBox;
 class QSlider;
 
 namespace Editor
@@ -23,12 +23,12 @@ namespace Editor
     public slots:
         void onSceneScaled(float scale, const cocos2d::Point &focus);
         void onSceneScaleSlider(int value);
-        void onSceneScaleSpinBox(double value);
+        void onSceneScaleSpinBox(int value);
 
     protected:
         QStatusBar* 	bar_;
         QSlider*		sceneScaleSlider_;
-        QDoubleSpinBox*	sceneScaleSpinBox_;
+        QSpinBox*		sceneScaleSpinBox_;
 
         float 			sceneScaleRange_;
     };

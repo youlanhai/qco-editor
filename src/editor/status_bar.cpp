@@ -6,7 +6,7 @@
 #include <base/CCDirector.h>
 
 #include <QStatusBar>
-#include <QDoubleSpinBox>
+#include <QSpinBox>
 #include <QSlider>
 
 namespace Editor
@@ -24,14 +24,14 @@ namespace Editor
         sceneScaleSlider_->setValue(100);
         bar_->addPermanentWidget(sceneScaleSlider_);
 
-        sceneScaleSpinBox_ = new QDoubleSpinBox();
+        sceneScaleSpinBox_ = new QSpinBox();
         sceneScaleSpinBox_->setMaximumWidth(80);
         sceneScaleSpinBox_->setRange(1.0f / sceneScaleRange_ * 100, sceneScaleRange_ * 100);
         sceneScaleSpinBox_->setValue(100);
         bar_->addPermanentWidget(sceneScaleSpinBox_);
 
         connect(sceneScaleSlider_, SIGNAL(valueChanged(int)), this, SLOT(onSceneScaleSlider(int)));
-        connect(sceneScaleSpinBox_, SIGNAL(valueChanged(double)), this, SLOT(onSceneScaleSpinBox(double)));
+        connect(sceneScaleSpinBox_, SIGNAL(valueChanged(int)), this, SLOT(onSceneScaleSpinBox(int)));
         connect(this, SIGNAL(signalSceneScaled(float, cocos2d::Point)), this, SLOT(onSceneScaled(float, cocos2d::Point)));
     }
 
@@ -58,7 +58,7 @@ namespace Editor
         emit signalSceneScaled(scale, focus);
     }
 
-    void StatusBar::onSceneScaleSpinBox(double value)
+    void StatusBar::onSceneScaleSpinBox(int value)
     {
         cocos2d::Size size = cocos2d::Director::getInstance()->getWinSize();
         cocos2d::Point focus(size.width * 0.5f, size.height * 0.5f);
