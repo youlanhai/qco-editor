@@ -50,8 +50,9 @@ HEADERS +=\
 	$$PWD/runtime/loaders/text_loader.h \
 	$$PWD/runtime/loaders/tile_collision_node_loader.h \
 	$$PWD/runtime/loaders/widget_loader.h \
-    $$PWD/runtime/layouts/base_layout_loader.h \
-    $$PWD/runtime/layouts/layout_loader_v1.h \
+	$$PWD/runtime/layouts/base_layout_loader.h \
+	$$PWD/runtime/layouts/layout_loader_v1.h \
+
 
 SOURCES +=\
 	$$PWD/runtime/base_loader_mgr.cpp \
@@ -102,5 +103,5 @@ SOURCES +=\
 	$$PWD/runtime/loaders/text_loader.cpp \
 	$$PWD/runtime/loaders/tile_collision_node_loader.cpp \
 	$$PWD/runtime/loaders/widget_loader.cpp \
-    $$PWD/runtime/layouts/base_layout_loader.cpp \
-    $$PWD/runtime/layouts/layout_loader_v1.cpp \
+	$$PWD/runtime/layouts/base_layout_loader.cpp \
+	$$PWD/runtime/layouts/layout_loader_v1.cpp \

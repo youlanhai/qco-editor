@@ -1,4 +1,4 @@
-#include "base_layout_loader.h"
+﻿#include "base_layout_loader.h"
 #include "../object_factory.h"
 #include "../json_helper.h"
 
@@ -10,6 +10,11 @@ BaseLayoutLoader::BaseLayoutLoader()
 BaseLayoutLoader::~BaseLayoutLoader()
 {
 
+}
+
+bool BaseLayoutLoader::init()
+{
+    return true;
 }
 
 void BaseLayoutLoader::applyProperties(ObjectLoader *loader, const JsonHandle &config, ObjectType *p)

@@ -1,4 +1,4 @@
-#include "layout_loader_v1.h"
+﻿#include "layout_loader_v1.h"
 
 
 #include <2d/CCNode.h>
@@ -107,14 +107,14 @@ void LayoutLoaderV1::loadComponents(ObjectLoader* /*loader*/, const JsonHandle &
 bool LayoutLoaderV1::upgradeLayoutFile(JsonHandle document)
 {
     int version = json2int(document["version"]);
-    if(version < version_)
+    if(version < getVersion())
     {
         if(!upgradeConfig(document))
         {
            return false;
         }
 
-        document.setMember("version", JsonValue(version_));
+        document.setMember("version", JsonValue(getVersion()));
     }
     return true;
 }

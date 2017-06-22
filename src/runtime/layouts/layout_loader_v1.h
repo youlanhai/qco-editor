@@ -1,4 +1,4 @@
-#ifndef LAYOUT_LOADER_V1_H
+﻿#ifndef LAYOUT_LOADER_V1_H
 #define LAYOUT_LOADER_V1_H
 
 #include "base_layout_loader.h"

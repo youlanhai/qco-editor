@@ -1,7 +1,8 @@
-#ifndef BASE_LAYOUT_LOADER_H
+﻿#ifndef BASE_LAYOUT_LOADER_H
 #define BASE_LAYOUT_LOADER_H
 
 #include "../object_loader.h"
+#include <CCRef.h>
 
 // layout文件加载器基类
 class PIP_DLL BaseLayoutLoader : public cocos2d::Ref
@@ -9,6 +10,8 @@ class PIP_DLL BaseLayoutLoader : public cocos2d::Ref
 public:
     BaseLayoutLoader();
     virtual ~BaseLayoutLoader();
+
+    virtual bool init();
 
     /** 获取当前文件加载器的版本 */
     virtual int getVersion() const = 0;
